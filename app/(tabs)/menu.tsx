@@ -37,12 +37,8 @@ export default function MenuScreen() {
 				{/* Truck Info Section */}
 				<View style={styles.infoSection}>
 					<Text style={styles.infoTitle}>Find Us</Text>
-					<Text style={styles.infoText}>
-						📍 123 Food Truck Alley, Downtown
-					</Text>
-					<Text style={styles.infoText}>
-						🕒 Mon-Fri: 11:00 AM - 8:00 PM
-					</Text>
+					<Text style={styles.infoText}>📍 123 Food Truck Alley, Downtown</Text>
+					<Text style={styles.infoText}>🕒 Mon-Fri: 11:00 AM - 8:00 PM</Text>
 				</View>
 
 				<View style={{ height: 40 }} />

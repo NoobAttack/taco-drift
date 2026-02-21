@@ -14,11 +14,7 @@ export default function MenuCard({
 	onPress,
 }: MenuCardProps) {
 	return (
-		<TouchableOpacity
-			onPress={onPress}
-			activeOpacity={0.8}
-			style={styles.card}
-		>
+		<TouchableOpacity onPress={onPress} activeOpacity={0.8} style={styles.card}>
 			<View style={styles.cardContent}>
 				<Text style={styles.cardTitle}>{title}</Text>
 				<Text style={styles.cardPrice}>{price}</Text>

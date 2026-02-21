@@ -10,7 +10,9 @@ export default function HomeScreen() {
 					<Text style={styles.title}>Taco Drift</Text>
 					<Text style={styles.tagline}>Fast Food. Slow Cooked.</Text>
 					<Text style={styles.description}>
-						Welcome to the city&apos;s favorite fictional food truck. We serve street-style tacos with a modern twist. Find us drifting through downtown every weekday!
+						Welcome to the city&apos;s favorite fictional food truck. We serve
+						street-style tacos with a modern twist. Find us drifting through
+						downtown every weekday!
 					</Text>
 				</View>
 
@@ -20,17 +22,23 @@ export default function HomeScreen() {
 
 					<View style={styles.itemCard}>
 						<Text style={styles.itemTitle}>The Drifter</Text>
-						<Text style={styles.itemDescription}>Slow-roasted pork with pineapple salsa.</Text>
+						<Text style={styles.itemDescription}>
+							Slow-roasted pork with pineapple salsa.
+						</Text>
 					</View>
 
 					<View style={styles.itemCard}>
 						<Text style={styles.itemTitle}>Spicy Asada</Text>
-						<Text style={styles.itemDescription}>Marinated steak with jalapeño crema.</Text>
+						<Text style={styles.itemDescription}>
+							Marinated steak with jalapeño crema.
+						</Text>
 					</View>
 
 					<View style={styles.itemCard}>
 						<Text style={styles.itemTitle}>Veggie Velocity</Text>
-						<Text style={styles.itemDescription}>Roasted cauliflower and black beans.</Text>
+						<Text style={styles.itemDescription}>
+							Roasted cauliflower and black beans.
+						</Text>
 					</View>
 				</View>
 			</ScrollView>
