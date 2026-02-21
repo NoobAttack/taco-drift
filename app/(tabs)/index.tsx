@@ -1,4 +1,5 @@
 import { View, Text, ScrollView, StyleSheet } from 'react-native';
+import { Link } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function HomeScreen() {
@@ -41,6 +42,10 @@ export default function HomeScreen() {
 						</Text>
 					</View>
 				</View>
+
+				<Link href='/modal' style={styles.modalButton}>
+					<Text style={styles.modalButtonText}>More Options</Text>
+				</Link>
 			</ScrollView>
 		</SafeAreaView>
 	);
@@ -106,5 +111,20 @@ const styles = StyleSheet.create({
 	itemDescription: {
 		fontSize: 14,
 		color: '#64748b',
+	},
+	modalButton: {
+		marginTop: 24,
+		paddingVertical: 14,
+		paddingHorizontal: 20,
+		backgroundColor: '#f97316',
+		borderRadius: 8,
+		alignItems: 'center',
+		justifyContent: 'center',
+	},
+	modalButtonText: {
+		color: '#ffffff',
+		fontSize: 16,
+		fontWeight: '600',
+		textAlign: 'center',
 	},
 });

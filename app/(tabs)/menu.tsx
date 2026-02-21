@@ -16,29 +16,29 @@ export default function MenuScreen() {
 				{/* Menu Items */}
 				<MenuCard
 					title='The Drifter'
-					price='$4.50'
+					price='$4.99'
 					description='12-hour slow roasted pork shoulder, pineapple pico de gallo, cilantro.'
 				/>
 				<MenuCard
 					title='Spicy Asada'
-					price='$5.00'
+					price='$5.99'
 					description='Carne asada marinated in lime and chili, topped with jalapeño crema.'
 				/>
 				<MenuCard
 					title='Baja Fish'
-					price='$5.50'
+					price='$5.99'
 					description='Tempura battered cod, purple cabbage slaw, chipotle mayo.'
 				/>
 				<MenuCard
 					title='Veggie Velocity'
-					price='$4.00'
+					price='$4.99'
 					description='Roasted cauliflower, black bean puree, pickled onions, cotija cheese.'
 				/>
 				{/* Truck Info Section */}
 				<View style={styles.infoSection}>
 					<Text style={styles.infoTitle}>Find Us</Text>
-					<Text style={styles.infoText}>📍 123 Food Truck Alley, Downtown</Text>
-					<Text style={styles.infoText}>🕒 Mon-Fri: 11:00 AM - 8:00 PM</Text>
+					<Text style={styles.infoText}>📍 123 Central Park, Downtown</Text>
+					<Text style={styles.infoText}>🕒 Mon-Fri: 11:00 AM - 9:00 PM</Text>
 				</View>
 
 				<View style={{ height: 40 }} />

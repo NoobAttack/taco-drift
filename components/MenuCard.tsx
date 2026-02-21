@@ -24,6 +24,8 @@ export default function MenuCard({
 	);
 }
 
+// Menu items names, style, description, price
+
 const styles = StyleSheet.create({
 	card: {
 		backgroundColor: '#ffffff',
