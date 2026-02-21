@@ -1,14 +1,14 @@
-import { View, Text, ScrollView } from 'react-native';
+import { View, Text, ScrollView, StyleSheet } from 'react-native';
 import MenuCard from '@/components/MenuCard';
 
 export default function MenuScreen() {
 	return (
-		<View className='flex-1 bg-slate-50'>
-			<ScrollView className='p-6'>
+		<View style={styles.container}>
+			<ScrollView contentContainerStyle={styles.scrollContent}>
 				{/* Header Section */}
-				<View className='mb-6 border-b border-gray-200 pb-4'>
-					<Text className='text-3xl font-bold text-slate-800'>Our Menu</Text>
-					<Text className='text-slate-500 mt-1'>
+				<View style={styles.header}>
+					<Text style={styles.headerTitle}>Our Menu</Text>
+					<Text style={styles.headerSubtitle}>
 						Fresh ingredients, made to order.
 					</Text>
 				</View>
@@ -34,20 +34,63 @@ export default function MenuScreen() {
 					price='$4.00'
 					description='Roasted cauliflower, black bean puree, pickled onions, cotija cheese.'
 				/>
-
 				{/* Truck Info Section */}
-				<View className='mt-6 bg-slate-800 p-6 rounded-xl'>
-					<Text className='text-white font-bold text-xl mb-2'>Find Us</Text>
-					<Text className='text-gray-300'>
+				<View style={styles.infoSection}>
+					<Text style={styles.infoTitle}>Find Us</Text>
+					<Text style={styles.infoText}>
 						📍 123 Food Truck Alley, Downtown
 					</Text>
-					<Text className='text-gray-300 mt-1'>
+					<Text style={styles.infoText}>
 						🕒 Mon-Fri: 11:00 AM - 8:00 PM
 					</Text>
 				</View>
 
-				<View className='mt-8 mb-10' />
+				<View style={{ height: 40 }} />
 			</ScrollView>
 		</View>
 	);
 }
+
+const styles = StyleSheet.create({
+	container: {
+		flex: 1,
+		backgroundColor: '#f8fafc',
+	},
+	scrollContent: {
+		padding: 24,
+		paddingBottom: 40,
+	},
+	header: {
+		marginBottom: 24,
+		borderBottomWidth: 1,
+		borderBottomColor: '#e2e8f0',
+		paddingBottom: 16,
+	},
+	headerTitle: {
+		fontSize: 28,
+		fontWeight: '700',
+		color: '#1e293b',
+	},
+	headerSubtitle: {
+		fontSize: 14,
+		color: '#64748b',
+		marginTop: 8,
+	},
+	infoSection: {
+		marginTop: 24,
+		backgroundColor: '#1e293b',
+		padding: 24,
+		borderRadius: 12,
+	},
+	infoTitle: {
+		fontSize: 18,
+		fontWeight: '700',
+		color: '#ffffff',
+		marginBottom: 8,
+	},
+	infoText: {
+		fontSize: 14,
+		color: '#d1d5db',
+		marginBottom: 8,
+	},
+});

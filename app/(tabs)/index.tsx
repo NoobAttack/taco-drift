@@ -1,59 +1,102 @@
-import { View, Text, ScrollView } from 'react-native';
+import { View, Text, ScrollView, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function HomeScreen() {
 	return (
-		<SafeAreaView className='flex-1 bg-slate-50'>
-			<ScrollView className='p-6'>
+		<SafeAreaView style={styles.container}>
+			<ScrollView contentContainerStyle={styles.scrollContent}>
 				{/* Hero Section */}
-				<View className='mb-8 items-center'>
-					<Text className='text-4xl font-extrabold text-slate-800 text-center mb-2'>
-						Taco Drift
-					</Text>
-					<Text className='text-orange-600 font-semibold text-lg uppercase tracking-widest mb-4'>
-						Fast Food. Slow Cooked.
-					</Text>
-					<Text className='text-slate-600 text-center leading-6'>
-						Welcome to the city&apos;s favorite fictional food truck. We serve
-						street-style tacos with a modern twist. Find us drifting through
-						downtown every weekday!
+				<View style={styles.heroSection}>
+					<Text style={styles.title}>Taco Drift</Text>
+					<Text style={styles.tagline}>Fast Food. Slow Cooked.</Text>
+					<Text style={styles.description}>
+						Welcome to the city&apos;s favorite fictional food truck. We serve street-style tacos with a modern twist. Find us drifting through downtown every weekday!
 					</Text>
 				</View>
 
 				{/* Featured Items List */}
 				<View>
-					<Text className='text-2xl font-bold text-slate-800 mb-4'>
-						🔥 Featured Today
-					</Text>
+					<Text style={styles.sectionTitle}>🔥 Featured Today</Text>
 
-					<View className='bg-white p-4 rounded-lg mb-2 shadow-sm'>
-						<Text className='font-bold text-lg text-slate-700'>
-							The Drifter
-						</Text>
-						<Text className='text-slate-500'>
-							Slow-roasted pork with pineapple salsa.
-						</Text>
+					<View style={styles.itemCard}>
+						<Text style={styles.itemTitle}>The Drifter</Text>
+						<Text style={styles.itemDescription}>Slow-roasted pork with pineapple salsa.</Text>
 					</View>
 
-					<View className='bg-white p-4 rounded-lg mb-2 shadow-sm'>
-						<Text className='font-bold text-lg text-slate-700'>
-							Spicy Asada
-						</Text>
-						<Text className='text-slate-500'>
-							Marinated steak with jalapeño crema.
-						</Text>
+					<View style={styles.itemCard}>
+						<Text style={styles.itemTitle}>Spicy Asada</Text>
+						<Text style={styles.itemDescription}>Marinated steak with jalapeño crema.</Text>
 					</View>
 
-					<View className='bg-white p-4 rounded-lg mb-2 shadow-sm'>
-						<Text className='font-bold text-lg text-slate-700'>
-							Veggie Velocity
-						</Text>
-						<Text className='text-slate-500'>
-							Roasted cauliflower and black beans.
-						</Text>
+					<View style={styles.itemCard}>
+						<Text style={styles.itemTitle}>Veggie Velocity</Text>
+						<Text style={styles.itemDescription}>Roasted cauliflower and black beans.</Text>
 					</View>
 				</View>
 			</ScrollView>
 		</SafeAreaView>
 	);
 }
+
+const styles = StyleSheet.create({
+	container: {
+		flex: 1,
+		backgroundColor: '#f8fafc',
+	},
+	scrollContent: {
+		padding: 24,
+		paddingBottom: 40,
+	},
+	heroSection: {
+		marginBottom: 32,
+		alignItems: 'center',
+	},
+	title: {
+		fontSize: 36,
+		fontWeight: '800',
+		color: '#1e293b',
+		marginBottom: 8,
+		textAlign: 'center',
+	},
+	tagline: {
+		fontSize: 14,
+		fontWeight: '600',
+		color: '#f97316',
+		marginBottom: 16,
+		textTransform: 'uppercase',
+		letterSpacing: 1,
+	},
+	description: {
+		fontSize: 16,
+		color: '#475569',
+		textAlign: 'center',
+		lineHeight: 24,
+	},
+	sectionTitle: {
+		fontSize: 24,
+		fontWeight: '700',
+		color: '#1e293b',
+		marginBottom: 16,
+	},
+	itemCard: {
+		backgroundColor: '#ffffff',
+		padding: 16,
+		marginBottom: 8,
+		borderRadius: 8,
+		shadowColor: '#000',
+		shadowOffset: { width: 0, height: 1 },
+		shadowOpacity: 0.1,
+		shadowRadius: 2,
+		elevation: 2,
+	},
+	itemTitle: {
+		fontSize: 16,
+		fontWeight: '700',
+		color: '#334155',
+		marginBottom: 4,
+	},
+	itemDescription: {
+		fontSize: 14,
+		color: '#64748b',
+	},
+});

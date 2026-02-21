@@ -26,8 +26,8 @@ export default function RootLayout() {
 					headerTintColor: '#fff',
 					headerTitleStyle: { fontWeight: 'bold' },
 					headerTitle: () => (
-						<View className='flex-row items-center'>
-							<Text className='text-white font-bold text-xl'>
+						<View style={{ flexDirection: 'row', alignItems: 'center' }}>
+							<Text style={{ color: '#fff', fontWeight: 'bold', fontSize: 18 }}>
 								🌮 Taco Drift
 							</Text>
 						</View>
